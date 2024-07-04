@@ -1,0 +1,37 @@
+/* styles.css */
+@media (max-width: 768px) {
+  div {
+    width: 80%; /* Cambiar el ancho del div a 80% en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  div {
+    width: 90%; /* Cambiar el ancho del div a 90% en pantallas aún más pequeñas */
+  }
+}
+
+body {
+  font-family: "Arial", sans-serif;
+}
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px; /* Ajusta el valor según el radio de redondeo deseado */
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+}

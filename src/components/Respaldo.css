@@ -1,0 +1,81 @@
+.tabla-alertas {
+    width: 70%;
+    margin-top: 20px;
+    margin-right: 50px;
+    float: right; /* Alinea la tabla a la derecha */
+    border-collapse: separate; /* Separar los bordes de las celdas */
+    border-spacing: 0; /* Espaciado entre celdas */
+    border-radius: 10px; /* Redondear las esquinas de la tabla */
+    overflow: hidden; /* Ocultar cualquier contenido que desborde de la tabla */
+    position: relative; /* Permitir posicionar el botón de manera absoluta dentro de la tabla */
+  }
+  
+  .generar-pdf-btn {
+    position: absolute; /* Posición absoluta en relación con la tabla */
+    top: -40px; /* Distancia desde la parte superior */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Ajustar para centrar horizontalmente */
+    background-color: #007bff; /* Color de fondo predeterminado */
+    color: white; /* Color del texto */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Redondear los bordes */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave */
+  }
+  
+  .generar-pdf-btn:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el cursor por encima */
+  }
+  
+  
+  .tabla-alertas th, .tabla-alertas td {
+    border: none; /* Eliminar los bordes de las celdas de datos */
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .tabla-alertas th {
+    background-color: #002761;
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd; /* Añadir un borde inferior a los títulos */
+  }
+  
+  .tabla-alertas tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .tabla-alertas tr:hover {
+    background-color: #dcdcdc;
+  }
+  
+  .tabla-alertas td {
+    color: #333;
+  }
+  
+  .tabla-alertas .status-pendiente {
+    color: red;
+  }
+  
+  .tabla-alertas .status-resuelto {
+    color: green;
+  }
+  
+  .tabla-alertas .status {
+    font-weight: bold;
+  }
+  
+  .tabla-container {
+    max-height: 400px; /* Altura máxima de la tabla antes de aparecer el scroll */
+    overflow-y: auto; /* Habilita el scroll vertical */
+  }
+  
+  .btn-primary {
+    margin-top: 20px; /* Espacio entre la tabla y el botón */
+  }
+  
+  .titulo {
+    text-align: center;
+  }
+  

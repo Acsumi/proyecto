@@ -1,0 +1,59 @@
+.tabla-alertas {
+  width: 90%;
+  margin-top: 20px;
+  margin-right: 200px;
+  float: left; /* Alinea la tabla a la derecha */
+  border-collapse: separate; /* Separar los bordes de las celdas */
+  border-spacing: 0; /* Espaciado entre celdas */
+  border-radius: 10px; /* Redondear las esquinas de la tabla */
+  overflow: hidden; /* Ocultar cualquier contenido que desborde de la tabla */
+}
+
+.tabla-alertas th, .tabla-alertas td {
+  border: none; /* Eliminar los bordes de las celdas de datos */
+  padding: 12px;
+  text-align: center;
+}
+
+.tabla-alertas th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  border-bottom: 2px solid #ddd; /* Añadir un borde inferior a los títulos */
+}
+
+.tabla-alertas tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tabla-alertas tr:hover {
+  background-color: #dcdcdc;
+}
+
+.tabla-alertas td {
+  color: #333;
+}
+
+.table-container {
+  max-height: 250px; /* Ajusta la altura máxima según sea necesario */
+  overflow-y: auto; /* Habilita el desplazamiento vertical cuando se excede la altura máxima */
+}
+
+
+.tabla-alertas .status-pendiente {
+  color: red;
+}
+
+.tabla-alertas .status-resuelto {
+  color: green;
+}
+
+.tabla-alertas .status {
+  font-weight: bold;
+}
+
+.titulo {
+  text-align: center;
+  margin-left: 300px; /* Ajusta este valor según sea necesario */
+}
+
