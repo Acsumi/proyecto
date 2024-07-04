@@ -79,7 +79,7 @@ const Mapa = () => {
       <CustomButton> Alertas pendientes</CustomButton>
 
     </div>
-    <img src={MapaI} alt="Mapa" style={{ marginTop: '20px', maxWidth: '65%', height: 'auto', marginLeft: '400px' }} />
+    <img src={MapaI} alt="Mapa" style={{ marginTop: '20px', maxWidth: '65%', height: 'auto', marginLeft: '401px' }} />
 
     </div>
   );
