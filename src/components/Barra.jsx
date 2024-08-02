@@ -3,7 +3,7 @@ import './Barra.css'; // Estilo CSS para el sidebar
 import { BiMessageSquareDetail } from 'react-icons/bi';
 
 import { FaHome, FaFileAlt, FaMap, FaEnvelope, FaSignOutAlt } from 'react-icons/fa'; // Importamos los iconos de Font Awesome
-import img from "../../assets/images/logo.png"; // Importamos la imagen
+import img from "../assets/images/logo.png"; // Importamos la imagen
 
 const Sidebar = () => {
   return (

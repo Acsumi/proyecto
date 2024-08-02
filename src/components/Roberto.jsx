@@ -1,5 +1,5 @@
 import React from "react";
-import doctora from "../../assets/images/doctora.png";
+import doctora from "../assets/images/doctora.png";
 
 const Roberto = () => {
   return (

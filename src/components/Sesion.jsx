@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import logo from "../../assets/images/logo.png";
+import logo from "../assets/images/logo.png";
 import { FaGoogle, FaFacebook, FaApple, FaTwitter } from "react-icons/fa";
-import robotcor from "../../assets/images/robotcor.png";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group"; // Importa CSSTransition
 import "./trans.css"; // Importa tus estilos CSS

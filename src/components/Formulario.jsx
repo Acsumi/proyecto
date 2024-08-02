@@ -1,5 +1,5 @@
 import "./Navbar.css"; // Asegúrate de tener la ruta correcta al archivo CSS
-import logo from "../../assets/images/logo.png";
+import logo from "../assets/images/logo.png";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { CSSTransition } from "react-transition-group"; // Importa CSSTransition

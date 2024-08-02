@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"; // Importa el archivo de estilos
-import logo from "../../assets/images/logo.png";
+import logo from "../assets/images/logo.png";
 
 const Soporte = () => {
     const CustomLink = ({ href, children }) => {

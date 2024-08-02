@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import logo from "../../assets/images/logo.png";
-import ser1 from "../../assets/images/ser1.png";
-import ser from "../../assets/images/ser.png";
+import logo from "../assets/images/logo.png";
+import ser1 from "../assets/images/ser1.png";
+import ser from "../assets/images/ser.png";
 import { FaGoogle, FaFacebook, FaApple, FaTwitter } from "react-icons/fa";
 import styled from 'styled-components';
 

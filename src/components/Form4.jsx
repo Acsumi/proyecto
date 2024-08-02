@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../assets/images/logo.png";
-import lupa from "../../assets/images/robot1.png";
+import lupa from "../assets/images/robot1.png";
 import { CSSTransition } from "react-transition-group"; // Importa CSSTransition
 import "./trans.css"; // Importa tus estilos CSS
 import { Link } from "react-router-dom";

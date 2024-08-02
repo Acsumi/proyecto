@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../assets/images/logo.png";
-import img from "../../assets/images/robot2.png";
+import logo from "../assets/images/logo.png";
+import img from "../assets/images/robot2.png";
 import { CSSTransition } from "react-transition-group"; // Importa CSSTransition
 import "./trans.css"; 
 import { Link } from "react-router-dom";

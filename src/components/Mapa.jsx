@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaExclamationCircle } from 'react-icons/fa'; // Importa el icono FaExclamationCircle de react-icons/fa
-import MapaI from "../../assets/images/Mapa.png";
+import MapaI from "../assets/images/Mapa.png";
 import './Mapa.css'; // Importa los estilos CSS para el componente MensajesF
 import Sidebar from './Barra.jsx'; // Importa el componente Sidebar desde Barra.jsx
 import UserBadge from './Icono.jsx'; // Asegúrate de ajustar la ruta al archivo si está en una ubicación diferente

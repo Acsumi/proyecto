@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css"; // Importa el archivo de estilos
-import logo from "../../assets/images/logo.png";
-import doc2 from "../../assets/images/doc2.png";
-import celu from "../../assets/images/celu.png";
-import Doctores from "../../assets/images/doctores.png";
+import logo from "../assets/images/logo.png";
+import celu from "../assets/images/celu.png";
+import Doctores from "../assets/images/doctores.png";
 
 const Inicio = () => {
   const CustomLink = ({ href, children }) => {

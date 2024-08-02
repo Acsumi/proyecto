@@ -1,7 +1,7 @@
 import React from 'react';
 // Estilo CSS para el sidebar
 import { FaHome, FaFileAlt, FaMap, FaEnvelope, FaSignOutAlt } from 'react-icons/fa'; // Importamos los iconos de Font Awesome
-import img from "../../assets/images/robot2.png"; // Importamos la imagen
+import img from "../assets/images/robot2.png"; // Importamos la imagen
 
 const Sidebar = () => {
   return (
