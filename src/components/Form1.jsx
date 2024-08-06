@@ -4,7 +4,7 @@ import img from "../assets/images/robot2.png";
 import { CSSTransition } from "react-transition-group"; // Importa CSSTransition
 import "./trans.css"; 
 import { Link } from "react-router-dom";
-import Button from "./Form2";
+
 
 const Form1 = () => {
   useEffect(() => {
@@ -319,7 +319,7 @@ const Form1 = () => {
                 wordWrap: "break-word",
               }}
             >
-              Apellidos
+              Apellido Paterno
             </div>
             <div
               className="Input"
@@ -347,8 +347,66 @@ const Form1 = () => {
                   fontWeight: 500,
                 }}
                 type="text"
-                placeholder="Ingresa tus apellidos"
+                placeholder="Ingresa tu apellido paterno"
               />
+              
+            </div>
+
+            <div
+              className="FormTitle"
+              style={{
+                color: "#425466",
+                fontSize: 14,
+                fontFamily: "Arial",
+                fontWeight: 500,
+                lineHeight: 3.5,
+                wordWrap: "break-word",
+              }}
+            >
+<div
+              className="FormTitle"
+              style={{
+                color: "#425466",
+                fontSize: 14,
+                fontFamily: "Arial",
+                fontWeight: 500,
+                lineHeight: 3.5,
+                wordWrap: "break-word",
+              }}
+            >
+              Apellido Paterno
+            </div>
+            </div>
+            <div
+              className="Input"
+              style={{
+                width: "80%",
+                background: "#EDF2F7",
+                borderRadius: 6,
+                justifyContent: "flex-start",
+                alignItems: "center",
+                display: "flex",
+                marginBottom: 10,
+              }}
+            >
+              <input
+                className="Control"
+                style={{
+                  flex: 1,
+                  height: 40,
+                  padding: "0 10px",
+                  border: "none",
+                  background: "#EDF2F7",
+                  color: "#7A828A",
+                  fontSize: 14,
+                  fontFamily: "Arial",
+                  fontWeight: 500,
+                }}
+                type="text"
+                placeholder="Ingresa tu apellido materno"
+              />
+              <div />
+              
             </div>
             <div
               className="FormTitle"

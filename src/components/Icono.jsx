@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import FaceIcon from '@material-ui/icons/Face';
-import AccessTimeIcon from '@material-ui/icons/AccessTime'; // Importamos el icono de reloj
+import FaceIcon from '@mui/icons-material/Face';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+
 
 const UserIconWithText = () => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [currentTime, setCurrentTime] = useState(new Date());
 
   useEffect(() => {
     const timerID = setInterval(() => {
