@@ -42,6 +42,7 @@ const Formulario = () => {
       </a>
     );
   };
+  
   const CustomButton = ({ children }) => {
     const [isHovered, setIsHovered] = useState(false);
 
@@ -51,15 +52,15 @@ const Formulario = () => {
         style={{
           width: 150,
           height: 50,
-          background: isHovered ? "#002761" : "#fff", // Cambiado el color del fondo basado en el estado hovered
+          background: isHovered ? "#4AB3CA" : "#FFFFFF", // Cambiado el color del fondo basado en el estado hovered
           color: isHovered ? "#FFFFFF" : "#000000",
-          border: "0.5px solid #425466", /* Define el grosor y el color del borde */
+          border: "none",
           borderRadius: 10,
-          textTransform: "uppercase",
           textAlign: "center",
           fontSize: 14,
           fontFamily: "Arial",
           fontWeight: "700",
+          textTransform: "uppercase",
           wordWrap: "break-word",
           justifyContent: "center",
           alignItems: "center",
@@ -89,15 +90,13 @@ const Formulario = () => {
     );
   };
   return (
-    <CSSTransition in={true} appear={true} classNames="fade" timeout={300}>
-
     <div>
       <img
         style={{
           position: "absolute",
           paddingTop: 30,
           top: "calc(2% + 3px)",
-          right: 1290,
+          right: 1330,
           width: "3%",
           height: "auto",
         }}
@@ -108,7 +107,7 @@ const Formulario = () => {
       <div style={{ width: "100%", height: "100%", position: "relative" }}>
         <div
           style={{
-            width: 2558.12,
+            width: 1408.12,
             paddingBottom: 4.48,
             left: 295.88,
             top: 34.72,
@@ -119,12 +118,22 @@ const Formulario = () => {
             display: "inline-flex",
           }}
         >
-       
+         <div style={{ display: 'flex', alignItems: 'center', width: 954.62, opacity: 0.75 }}>
+         <h3 style={{ marginRight: '30px', color: '#FFFFFF' }}>Títulosin </h3>
+            <CustomLink href="/Inicio">Inicio</CustomLink>
+            <CustomLink href="/servicios">Servicios</CustomLink>
+            <CustomLink href="/brigada">Brigada</CustomLink>
+            <CustomLink href="/Nosotros">Contactos</CustomLink>
+        </div>
+
 
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <Link to="/inicio" style={{ textDecoration: "none" }}>
-              <CustomButton>Salir</CustomButton>
-           </Link>
+            <Link to="/Formulario" style={{ textDecoration: "none" }}>
+              <CustomButton>Crear cuenta</CustomButton>
+            </Link>
+            <Link to="/Sesion" style={{ textDecoration: "none" }}>
+              <CustomButton>Iniciar sesión</CustomButton>
+            </Link>
           </div>
 
           <div
@@ -161,9 +170,10 @@ const Formulario = () => {
             </div>
           </div>
         </div>
+
         <div
           style={{
-            width: 374.88,
+            width: 388.88,
             height: 60.48,
             left: 36,
             top: 25.76,
@@ -193,10 +203,7 @@ const Formulario = () => {
                 wordWrap: "break-word",
               }}
             >
-              <a
-                href="/Inicio"
-                style={{ textDecoration: "none", color: "#302F2F" }}
-              >
+              <a href="inicio" style={{ textDecoration: "none", color: "#302F2F" }}>
                 PBOO
               </a>
             </div>
@@ -479,7 +486,6 @@ const Formulario = () => {
         </div>
       </div>
     </div>
-    </CSSTransition>
   );
 };
 

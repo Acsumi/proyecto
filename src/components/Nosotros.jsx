@@ -1,17 +1,106 @@
-import nos from "../assets/images/nos.png";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/images/logo.png";
+import lupa from "../assets/images/robot1.png";
+import { CSSTransition } from "react-transition-group"; // Importa CSSTransition
+import "./trans.css"; // Importa tus estilos CSS
+import { Link } from "react-router-dom";
+import Button from "./Inicio";
+import nos from "../assets/images/nos.png";
 
 const Nosotros = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0); // Mueve la página hacia la parte superior cuando se monta el componente
+  }, []);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
+  const [placeOfBirth, setPlaceOfBirth] = useState("");
+  const [isHovered, setIsHovered] = useState(false);
+  const EstiloCampo = {
+    color: "#425466",
+    fontSize: 14,
+    fontFamily: "Arial",
+    fontWeight: 500,
+    lineHeight: 3.5,
+    wordWrap: "break-word",
+    marginBottom: 10,
   };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
+  const EstiloInput = {
+    width: "80%",
+    background: "#EDF2F7",
+    borderRadius: 6,
+    justifyContent: "flex-start",
+    alignItems: "center",
+    display: "flex",
+    marginBottom: 10,
+  };
+  const Button = ({ children }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+      <div
+        className="Button"
+        style={{
+          width: 150,
+          height: 30,
+          background: isHovered ? "#002761" : "#FFFFFF",
+          color: isHovered ? "#FFFFFF" : "#000000",
+          border: isHovered ? "none" : "1px solid #ccc", // Añadir borde cuando no está seleccionado
+          border: "0.5px solid #425466", /* Define el grosor y el color del borde */
+          borderRadius: 10,
+          textTransform: "uppercase",
+          textAlign: "center",
+          fontSize: 14,
+          fontFamily: "Arial",
+          fontWeight: "700",
+          wordWrap: "break-word",
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
+          marginRight: 10,
+          transition: "background 0.3s, color 0.3s",
+          textDecoration: "none", // Evitar la línea debajo del texto como un enlace
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <a
+          href="/crear-cuenta"
+          style={{
+            textDecoration: "none",
+            color: isHovered ? "#FFFFFF" : "#000000",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {children}
+        </a>
+      </div>
+    );
+  };
+  class Rectangle extends React.Component {
+    render() {
+      const { width, height, color } = this.props;
+      const rectangleStyle = {
+        width: width,
+        height: height,
+        backgroundColor: color,
+        border: "1px solid #000", // Puedes ajustar el estilo del borde según tus necesidades
+      };
+
+      return <div style={rectangleStyle}></div>;
+    }
+  }
+
+  const handlePlaceOfBirthChange = (event) => {
+    setPlaceOfBirth(event.target.value);
+  };
+  const [accepted, setAccepted] = useState(false);
+
+  const toggleAcceptance = () => {
+    setAccepted(!accepted);
   };
   const CustomLink = ({ href, children }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -36,6 +125,7 @@ const Nosotros = () => {
       </a>
     );
   };
+
   const CustomButton = ({ children }) => {
     const [isHovered, setIsHovered] = useState(false);
 
@@ -45,15 +135,61 @@ const Nosotros = () => {
         style={{
           width: 150,
           height: 50,
-          background: isHovered ? "#4AB3CA" : "#FFFFFF", // Cambiado el color del fondo basado en el estado hovered
+          background: isHovered ? "#002761" : "#fff", // Cambiado el color del fondo basado en el estado hovered
           color: isHovered ? "#FFFFFF" : "#000000",
-          border: "none",
+          border: "0.5px solid #425466", /* Define el grosor y el color del borde */
           borderRadius: 10,
+          textTransform: "uppercase",
           textAlign: "center",
           fontSize: 14,
           fontFamily: "Arial",
           fontWeight: "700",
+          wordWrap: "break-word",
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
+          marginRight: 10,
+          transition: "background 0.3s, color 0.3s",
+          textDecoration: "none", // Evitar la línea debajo del texto como un enlace
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <a
+          href="/crear-cuenta"
+          style={{
+            textDecoration: "none",
+            color: isHovered ? "#FFFFFF" : "#000000",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {children}
+        </a>
+      </div>
+    );
+  };
+  const MenuButton = ({ children }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+      <div
+        className="Button"
+        style={{
+          width: 150,
+          height: 50,
+          background: isHovered ? "#4AB3CA" : "#fff", // Cambiado el color del fondo basado en el estado hovered
+          color: isHovered ? "#FFFFFF" : "#000000",
+          border: "none", /* Define el grosor y el color del borde */
+          borderRadius: 10,
           textTransform: "uppercase",
+          textAlign: "center",
+          fontSize: 14,
+          fontFamily: "Arial",
+          fontWeight: "700",
           wordWrap: "break-word",
           justifyContent: "center",
           alignItems: "center",
@@ -83,13 +219,15 @@ const Nosotros = () => {
     );
   };
   return (
-    <div>
+    <CSSTransition in={true} appear={true} classNames="fade" timeout={300}>
+
+<div>
       <img
         style={{
           position: "absolute",
           paddingTop: 30,
           top: "calc(2% + 3px)",
-          right: 1290,
+          right: 1330,
           width: "3%",
           height: "auto",
         }}
@@ -123,10 +261,10 @@ const Nosotros = () => {
 
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
             <Link to="/Formulario" style={{ textDecoration: "none" }}>
-              <CustomButton>Crear cuenta</CustomButton>
+              <MenuButton>Crear cuenta</MenuButton>
             </Link>
             <Link to="/Sesion" style={{ textDecoration: "none" }}>
-              <CustomButton>Iniciar sesión</CustomButton>
+              <MenuButton>Iniciar sesión</MenuButton>
             </Link>
           </div>
 
@@ -204,226 +342,165 @@ const Nosotros = () => {
           </div>
         </div>
       </div>
-      <div style={{ width: '100%', height: '100%', position: 'relative' }}>
-      <div
-        style={{
-          width: 610,
-          height: 606,
-          left: 753,
-          top: 0,
-          position: 'absolute',
-          borderRadius: 20,
-          overflow: 'hidden',
-        }}
-      ></div>
-      <div
-        style={{
-          width: 353,
-          left: 193,
-          top: 17.5,
-          position: 'absolute',
-          color: '#363940',
-          fontSize: 32,
-          fontFamily: 'Arial',
-          fontWeight: '700',
-          lineHeight: 8,
-          wordWrap: 'break-word',
-        }}
-      >
-        Contacta con nosotros
-      </div>
 
-      <div
-        style={{
-          width: 460,
-          height: 318,
-          left: 193,
-          top: 232,
-          position: 'absolute',
-        }}
-      >
-        <div
-          style={{
-            width: 460,
-            height: 166,
-            paddingTop: 95,
-            paddingBottom: 25,
-            left: 10,
-            
-            top: 152,
-            position: 'absolute',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            gap: 17,
-            display: 'inline-flex',
-          }}
-        >
-          <div
-            style={{
-              width: 160,
-              height: 350,
-              justifyContent: 'center',
-              alignItems: 'center',
-              display: 'inline-flex',
-            }}
-          >
-            <input
-              type="text"
-              style={{
-                width: 160,
-                height: 46,
-                padding: 20,
-                borderRadius: 4,
-                border: '1px #CAD1E1 solid',
-              }}
-              placeholder="Nombre (opcional)"
-            />
-          </div>
-          <div
-            style={{
-              width: 283,
-              height: 350,
-              justifyContent: 'center',
-              alignItems: 'center',
-              display: 'inline-flex',
-            }}
-          >
-            <input
-              type="email"
-              style={{
-                width: 280,
-                height: 46,
-                padding: 20,
-                borderRadius: 4,
-                border: '1px #CAD1E1 solid',
-              }}
-              placeholder="Correo electrónico (opcional)"
-            />
-          </div>
-        </div>
-        <div
-          style={{
-            width: 460,
-            height: 166,
-            left: 0,
-            top: 150,
-            position: 'absolute',
-          }}
-        >
-          <textarea
-            style={{
-              width: 500,
-              height: 166,
-              padding: 20,
-              borderRadius: 4,
-              border: '1px #CAD1E1 solid',
-            }}
-            placeholder="Descripción"
-          />
-        </div>
-        <div
-          style={{
-            width: 460,
-            height: 150,
-            justifyContent: 'center',
-            alignItems: 'center',
-            display: 'inline-flex',
-          }}
-        >
-          <input
-            type="text"
-            style={{
-              width: 460,
-              height: 46,
-              padding: 20,
-              borderRadius: 4,
-              border: '1px #CAD1E1 solid',
-            }}
-            placeholder="Asunto"
-          />
-        </div>
-      </div>
-   
-    
-        <div
-          style={{
-            width: 410,
-            left: 193,
-            top: 179,
-            position: "absolute",
-            color: "#778299",
-            fontSize: 16,
-            fontFamily: "Arial",
-            fontWeight: "400",
-            lineHeight: 2.1,
-            wordWrap: "break-word",
-          }}
-        >
-          ¡Gracias por tu interés en compartir tu opinión o reportar algún
-          inconveniente con nuestra app!{" "}
-        </div>
+        <br />
+        <br />
+        <br />
+        <br />
 
         <div
           style={{
-            width: 160,
-            height: 46,
-            left: 193,
-            top: 558,
-            position: "absolute",
+            //contenedor
+            width: "40%",
+            margin: "0 auto", // Esto centra el contenedor horizontalmente
+            border: "none", // Establece el borde del contenedor
+            padding: "20px", // Añade espacio interno al contenedor
+            marginLeft: "180px", // Mueve el contenedor hacia la derecha
           }}
         >
-          <div
-            className="Button"
-            style={{
-              width: 200,
-              height: 40,
-              background: isHovered ? "#002761" : "white",
-              color: isHovered ? "white" : "black",
-              borderRadius: 90,
-              justifyContent: "center",
-              alignItems: "center",
-              display: "flex",
-              marginTop: 180,
-              border: isHovered ? "none" : "1px solid #4E4E4E",
-              cursor: "pointer",
-              transition: "background 0.3s, color 0.3s",
-            }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
+          <div style={{ width: "100%" }}>
+            <br />
+            <div style={{ width: "100%" }}>
+            <div style={{ width: "100%" }}>
+              <div
+                className="SubTitle"
+                style={{
+                  color: "#27272E",
+                  fontSize: 24,
+                  fontFamily: "Arial",
+                  fontWeight: 600,
+                  lineHeight: 2.5,
+                  wordWrap: "break-word",
+                }}
+              >
+                Contacta con nosotros
+              </div>
+            </div>
             <div
-              className="Label"
               style={{
-                textAlign: "center",
-                fontSize: 16,
+                color: "#27272E",
+                fontSize: 15,
                 fontFamily: "Arial",
-                fontWeight: "700",
+                fontWeight: 500,
                 lineHeight: 1.5,
                 wordWrap: "break-word",
-                padding: "5px 10px",
               }}
             >
-              Enviar
+              ¡Gracias por tu interés en compartir tu opinión o reportar algún inconveniente con nuestra app!
+            </div>
+            </div>
+
+            <br />
+
+            <div>
+              <div style={EstiloCampo}>
+                <label>Correo electronico</label>
+                <div style={EstiloInput}>
+                  <input
+                    style={{
+                      flex: 1,
+                      height: 40,
+                      padding: "0 10px",
+                      border: "none",
+                      background: "#EDF2F7",
+                      color: "#7A828A",
+                      fontSize: 14,
+                      fontFamily: "Arial",
+                      fontWeight: 500,
+                    }}
+                    type="email"
+                    placeholder="Ingresa tu correo"
+                  />
+                </div>
+              </div>
+
+              {/* Tipo de sangre */}
+              <div style={EstiloCampo}>
+                <label>Asunto</label>
+                <div style={EstiloInput}>
+                  <input
+                    style={{
+                      flex: 1,
+                      height: 40,
+                      padding: "0 10px",
+                      border: "none",
+                      background: "#EDF2F7",
+                      color: "#7A828A",
+                      fontSize: 14,
+                      fontFamily: "Arial",
+                      fontWeight: 500,
+                    }}
+                    type="text"
+                    placeholder="Asunto"
+                  />
+                </div>
+              </div>
+
+              {/* Trastornos Psicológicos */}
+              <div style={EstiloCampo}>
+                <label>Descripción</label>
+                <div style={EstiloInput}>
+                  <textarea
+                    style={{
+                      flex: 1,
+                      height: 80,
+                      padding: "10px",
+                      border: "none",
+                      background: "#EDF2F7",
+                      color: "#7A828A",
+                      fontSize: 14,
+                      fontFamily: "Arial",
+                      fontWeight: 500,
+                    }}
+                    placeholder="Descripción"
+                  ></textarea>
+                </div>
+              </div>
+
+             
+             
+            </div>
+
+            <br />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: 20,
+            }}
+          >
+            <div style={{ display: "flex" }}>
+             
+              <Link to="/Form4" style={{ textDecoration: "none" }}>
+              <Button>
+                Enviar<span style={{ marginLeft: 5 }}></span>
+              </Button>
+              </Link>
             </div>
           </div>
+          <br />
         </div>
-        
+        <img
+          style={{
+            position: "absolute",
+            top: "calc(25% + 40px)",
+            right: 180,
+            width: "25%",
+            height: "auto",
+          }}
+          src={nos}
+          alt="Doctora"
+        />
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            background: "linear-gradient(3deg, #42A2B7 0%, #DEEEFE 100%)",
+          }}
+        ></div>
       </div>
-      
-      
-      <img
-        style={{
-          position: "absolute",
-          top: "calc(32% + 30px)",
-          right: 150,
-          width: "26%",
-          height: "auto",
-        }}
-        src={nos}
-        alt="nos"
-      />    
-    </div>
-    
+    </CSSTransition>
   );
 };
 

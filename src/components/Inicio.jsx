@@ -82,7 +82,7 @@ const Inicio = () => {
           position: "absolute",
           paddingTop: 30,
           top: "calc(2% + 3px)",
-          right: 1290,
+          right: 1330,
           width: "3%",
           height: "auto",
         }}
@@ -108,10 +108,8 @@ const Inicio = () => {
          <h3 style={{ marginRight: '30px', color: '#FFFFFF' }}>Títulosin </h3>
             <CustomLink href="/Inicio">Inicio</CustomLink>
             <CustomLink href="/servicios">Servicios</CustomLink>
-            
             <CustomLink href="/brigada">Brigada</CustomLink>
             <CustomLink href="/Nosotros">Contactos</CustomLink>
-            <CustomLink href="/Soporte">Soporte</CustomLink>
         </div>
 
 
@@ -191,7 +189,7 @@ const Inicio = () => {
                 wordWrap: "break-word",
               }}
             >
-              <a href="/" style={{ textDecoration: "none", color: "#302F2F" }}>
+              <a href="inicio" style={{ textDecoration: "none", color: "#302F2F" }}>
                 PBOO
               </a>
             </div>
