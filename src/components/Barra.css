@@ -41,7 +41,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  border-radius: 10px; /* Agregamos bordes redondeados */
+  border-radius: 10px; /* Bordes redondeados */
   transition: background-color 0.5s, color 0.5s; /* Transiciones suaves */
 }
 
@@ -51,13 +51,12 @@
 }
 
 .sidebar-menu li + li {
-  margin-top: 15px; /* Ajustamos el margen entre opciones */
+  margin-top: 15px; /* Margen entre opciones */
 }
 
 .sidebar-menu li svg {
   margin-right: 10px;
 }
-
 /* Estilos para los enlaces dentro del menú */
 .sidebar-menu a {
   color: inherit; /* Hereda el color del texto del contenedor padre */
@@ -94,4 +93,77 @@
 
 .sidebar-footer button svg {
   margin-right: 10px;
+}
+
+
+/* Barra.css */
+.modal-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.modal-button:hover {
+  opacity: 0.8;
+}
+
+/* Estilos para el modal */
+/* Estilos para el modal */
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos para los botones del modal */
+.modal-button {
+  padding: 12px 80px; /* Aumenta el tamaño del padding para hacer el botón más grande */
+  border-radius: 15px;
+  font-size: 18px; /* Aumenta el tamaño del texto */
+  border: 0.5px solid #425466;
+  cursor: pointer;
+  margin: 15px; /* Añade margen entre los botones */
+  transition: background-color 0.5s, color 0.5s; /* Añade una transición suave */
+}
+
+.modal-button:hover {
+  opacity: 2.9; /* Cambia la opacidad al pasar el cursor */
+}
+
+.modal-button.primary {
+  background-color: #ffffff; /* Color de fondo para el botón "Sí" */
+  color: rgb(0, 0, 0); /* Color del texto para el botón "Sí" */
+}
+
+.modal-button.primary:hover {
+  background-color: #002761; /* Color de fondo al pasar el cursor para el botón "Sí" */
+  color: rgb(255, 255, 255); /* Color del texto para el botón "No" */
+
+}
+
+.modal-button.secondary {
+  background-color: #ffffff; /* Color de fondo para el botón "No" */
+  color: rgb(0, 0, 0); /* Color del texto para el botón "No" */
+}
+
+.modal-button.secondary:hover {
+  background-color: #002761; /* Color de fondo al pasar el cursor para el botón "No" */
+  color: rgb(255, 255, 255); /* Color del texto para el botón "No" */
+
 }
