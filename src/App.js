@@ -1,6 +1,8 @@
 // App.jsx
 import React from "react";
+
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 import Inicio from "./components/Inicio";
 import Alertas from "./components/Alertas";
 

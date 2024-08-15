@@ -1,12 +1,12 @@
 import React from 'react';
 import Sidebar from './Barra.jsx'; // Importa el componente Sidebar desde Barra.jsx
 import Estadis from './Estadis.jsx'; // Importa el componente Estadis desde Estadis.jsx
-import Estadis2 from './Estadis2.jsx'; // Importa el componente Estadis2 desde Estadis2.jsx;
 import './Principal.css'; // Importa los estilos CSS para el componente Principal
 import UserBadge from './Icono.jsx'; // Asegúrate de ajustar la ruta al archivo si está en una ubicación diferente
 
 const Principal = () => {
   return (
+
     <div className="container-fluid">
       <UserBadge  />
 

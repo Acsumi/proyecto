@@ -43,6 +43,41 @@ const Sesion = () => {
   };
   
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const [isChecked, setIsChecked] = useState(false);
+  const CustomLink = ({ href, children }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+      <a
+        href={href}
+        style={{
+          textDecoration: "none",
+          color: isHovered ? "#4AB3CA" : "rgba(0, 0, 0, 0.87)", // Cambia el color del texto basado en el estado hovered
+          fontSize: 18,
+          fontFamily: "Arial",
+          fontWeight: "700",
+          wordWrap: "break-word",
+          transition: "background 0.3s, color 0.3s",
+          marginLeft: "30px", // Añade margen izquierdo para separar los enlaces
+        }}
+        onMouseEnter={() => setIsHovered(true)} // Establece hovered en true cuando el cursor entra
+        onMouseLeave={() => setIsHovered(false)} // Establece hovered en false cuando el cursor sale
+      >
+        {children}
+      </a>
+    );
+  };
+  
   const CustomButton = ({ children }) => {
     const [isHovered, setIsHovered] = useState(false);
 
@@ -52,21 +87,21 @@ const Sesion = () => {
         style={{
           width: 150,
           height: 50,
-          background: isHovered ? "#4AB3CA" : "#fff", // Cambiado el color del fondo basado en el estado hovered
+          background: isHovered ? "#4AB3CA" : "#FFFFFF", // Cambiado el color del fondo basado en el estado hovered
           color: isHovered ? "#FFFFFF" : "#000000",
-          border: "0.5px solid #425466", /* Define el grosor y el color del borde */
+          border: "none",
           borderRadius: 10,
-          textTransform: "uppercase",
           textAlign: "center",
           fontSize: 14,
           fontFamily: "Arial",
           fontWeight: "700",
+          textTransform: "uppercase",
           wordWrap: "break-word",
           justifyContent: "center",
           alignItems: "center",
           display: "flex",
           marginRight: 10,
-          transition: "background 0.5s, color 0.5s",
+          transition: "background 0.3s, color 0.3s",
           textDecoration: "none", // Evitar la línea debajo del texto como un enlace
         }}
         onMouseEnter={() => setIsHovered(true)}
@@ -89,25 +124,14 @@ const Sesion = () => {
       </div>
     );
   };
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
   return (
-    <CSSTransition in={true} appear={true} classNames="fade" timeout={300}>
-
     <div>
-    <img
+      <img
         style={{
           position: "absolute",
           paddingTop: 30,
           top: "calc(2% + 3px)",
-          right: 1290,
+          right: 1330,
           width: "3%",
           height: "auto",
         }}
@@ -118,7 +142,7 @@ const Sesion = () => {
       <div style={{ width: "100%", height: "100%", position: "relative" }}>
         <div
           style={{
-            width: 2558.12,
+            width: 1408.12,
             paddingBottom: 4.48,
             left: 295.88,
             top: 34.72,
@@ -129,12 +153,22 @@ const Sesion = () => {
             display: "inline-flex",
           }}
         >
-       
+         <div style={{ display: 'flex', alignItems: 'center', width: 954.62, opacity: 0.75 }}>
+         <h3 style={{ marginRight: '30px', color: '#FFFFFF' }}>Títulosin </h3>
+            <CustomLink href="/Inicio">Inicio</CustomLink>
+            <CustomLink href="/servicios">Servicios</CustomLink>
+            <CustomLink href="/brigada">Brigada</CustomLink>
+            <CustomLink href="/Nosotros">Contactos</CustomLink>
+        </div>
+
 
           <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <Link to="/inicio" style={{ textDecoration: "none" }}>
-              <CustomButton>Salir</CustomButton>
-           </Link>
+            <Link to="/Formulario" style={{ textDecoration: "none" }}>
+              <CustomButton>Crear cuenta</CustomButton>
+            </Link>
+            <Link to="/Sesion" style={{ textDecoration: "none" }}>
+              <CustomButton>Iniciar sesión</CustomButton>
+            </Link>
           </div>
 
           <div
@@ -171,9 +205,10 @@ const Sesion = () => {
             </div>
           </div>
         </div>
+
         <div
           style={{
-            width: 374.88,
+            width: 388.88,
             height: 60.48,
             left: 36,
             top: 25.76,
@@ -203,16 +238,14 @@ const Sesion = () => {
                 wordWrap: "break-word",
               }}
             >
-              <a
-                href="/Inicio"
-                style={{ textDecoration: "none", color: "#302F2F" }}
-              >
+              <a href="inicio" style={{ textDecoration: "none", color: "#302F2F" }}>
                 PBOO
               </a>
             </div>
           </div>
-              </div>
-              </div>
+        </div>
+      </div>
+
       <div
         style={{
           width: "100%",
@@ -648,7 +681,6 @@ const Sesion = () => {
         </div>
       </div>
     </div>
-    </CSSTransition>
   );
 };
 
