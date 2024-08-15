@@ -32,6 +32,7 @@ import Servicios from "./components/Servicios";
 import Brigada from "./components/Brigada";
 import Soporte from "./components/Soporte";
 import Mapa from "./components/Mapa";
+import Lineal from "./components/lineal";
 
 const App = () => {
   return (
@@ -48,8 +49,8 @@ const App = () => {
           <Route path="/Barra" element={<Sidebar />} />
           <Route path="/Alertas" element={<Alertas />} />
           <Route path="/Respaldo" element={<Respaldo />} />
-
-           <Route path="/Icono" element={<Icono />} />
+          <Route path="/lineal" element={<Lineal />} />
+          <Route path="/Icono" element={<Icono />} />
           <Route path="/Principal" element={<Principal />} />
           <Route path="/Nosotros" element={<Nosotros />} />
           <Route path="/TermCond" element={<TermCond />} />
