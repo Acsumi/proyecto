@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import L from "leaflet"; // Importa Leaflet para crear el icono personalizado
+import L from "leaflet";
 import { FaExclamationCircle } from "react-icons/fa";
 import Sidebar from "./Barra.jsx";
 import UserBadge from "./Icono.jsx";
 import "./Mapa.css";
-import ubi from "../assets/images/ubi.png"; // Importa la imagen de ubicación
 
 const CustomButton = ({ children }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -66,6 +65,9 @@ const Mapa = () => {
   const [position, setPosition] = useState([51.505, -0.09]); // Posición por defecto
   const [loaded, setLoaded] = useState(false);
 
+  // Posición del marcador adicional
+  const additionalMarkerPosition = [20.483551, -103.533466];
+
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -85,12 +87,10 @@ const Mapa = () => {
     }
   }, []);
 
-  // Crea un nuevo ícono de marcador con la imagen personalizada
-  const customIcon = new L.Icon({
-    iconUrl: ubi,
-    iconSize: [38, 38], // Ajusta el tamaño del ícono
-    iconAnchor: [19, 38], // Ajusta el punto de anclaje del ícono
-    popupAnchor: [0, -38], // Ajusta el punto de anclaje del popup
+  // Crea un ícono rojo personalizado como un puntito
+  const redDotIcon = new L.DivIcon({
+    html: '<div style="width: 12px; height: 12px; background-color: red; border-radius: 50%;"></div>',
+    className: '', // Evita cualquier clase predeterminada que pudiera afectar el estilo
   });
 
   return (
@@ -111,25 +111,28 @@ const Mapa = () => {
         <CustomButton>Alertas pendientes</CustomButton>
       </div>
       {loaded ? (
-       <MapContainer
-       center={position}
-       zoom={13}
-       style={{
-         height: "450px",
-         width: "75%",
-         margin: "20px auto", // Mantén el margen automático para centrar verticalmente
-         marginLeft: "20%", // Ajusta el margen izquierdo para mover el mapa hacia la derecha
-       }}
-     >
-       <TileLayer
-         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-       />
-       <Marker position={position} icon={customIcon}>
-         <Popup>Tu ubicación actual</Popup>
-       </Marker>
-     </MapContainer>
-     
+        <MapContainer
+          center={position}
+          zoom={13}
+          style={{
+            height: "450px",
+            width: "75%",
+            margin: "20px auto", // Mantén el margen automático para centrar verticalmente
+            marginLeft: "20%", // Ajusta el margen izquierdo para mover el mapa hacia la derecha
+          }}
+        >
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          />
+          <Marker position={position} icon={redDotIcon}>
+            <Popup>Tu ubicación actual</Popup>
+          </Marker>
+          {/* Marcador adicional con el puntito rojo */}
+          <Marker position={additionalMarkerPosition} icon={redDotIcon}>
+            <Popup>Marcador adicional</Popup>
+          </Marker>
+        </MapContainer>
       ) : (
         <p style={{ textAlign: "center", marginTop: "20px" }}>
           Cargando mapa...

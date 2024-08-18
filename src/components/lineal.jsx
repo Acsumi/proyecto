@@ -21,7 +21,7 @@ const Lineal = () => {
 
   return (
     <div>
-      <h1>Gráfica de Regresión Lineal</h1>
+      <h1>Predicción de pesos respecto a usuarios</h1>
       {plot ? (
         <img src={`data:image/png;base64,${plot}`} alt="Gráfica" />
       ) : (
