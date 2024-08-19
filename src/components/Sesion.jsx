@@ -450,6 +450,8 @@ const Sesion = () => {
                   >
                     
                   </input>
+                  <br />
+
                   <div style={{ }}>
             <Link to="/Principal" style={{ textDecoration: "none" }}>
               <BotonInicio>Entrar</BotonInicio>
@@ -460,6 +462,7 @@ const Sesion = () => {
             </div>
         
             </div>
+            <br />  <br />
             <div style={{ height: 94, position: "relative" }}>
               <div
                 style={{
@@ -474,6 +477,7 @@ const Sesion = () => {
                   display: "inline-flex",
                 }}
               >
+                
                 <div
                   style={{
                     flex: "1 1 0",
@@ -523,6 +527,7 @@ const Sesion = () => {
                 display: "inline-flex",
               }}
             >
+
               
                   <div style={{ width: 72, height: 52, position: "relative" }}>
                   <div>
@@ -538,28 +543,23 @@ const Sesion = () => {
                   <div>
                     <FaApple />
                   </div>
+                  
+      
                    </div>
+                   
+                   
                    
                 </div>
                 
               </div>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
+          
 
 
             
             </div>
-            <div style={{ }}>
-            <Link to="/inicio" style={{ textDecoration: "none" }}>
-              <BotonInicio>Salir</BotonInicio>
-           </Link>
-          </div>
+         
 
           </div>
-         
           <div
             style={{
               padding: 0.3,
@@ -596,6 +596,7 @@ const Sesion = () => {
               </span>
             </div>
           </div>
+          
         </div>
       </div>
     </div>
