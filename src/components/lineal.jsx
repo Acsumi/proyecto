@@ -20,13 +20,14 @@ const Lineal = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Predicción de pesos respecto a usuarios</h1>
-      {plot ? (
-        <img src={`data:image/png;base64,${plot}`} alt="Gráfica" />
-      ) : (
-        <p>Cargando gráfico...</p>
-      )}
+    <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '20px' }}>
+      <div style={{ width: '80%', maxWidth: '600px' }}>
+        {plot ? (
+          <img src={`data:image/png;base64,${plot}`} alt="Gráfica" style={{ width: '100%', height: 'auto' }} />
+        ) : (
+          <p>Cargando gráfico...</p>
+        )}
+      </div>
     </div>
   );
 };
