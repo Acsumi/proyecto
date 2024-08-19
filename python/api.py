@@ -53,4 +53,4 @@ def train_model():
     return jsonify({'plot': img_base64})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5001)  # Cambia el puerto aquí a 5001
