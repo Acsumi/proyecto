@@ -4,7 +4,7 @@ const Lineal = () => {
   const [plot, setPlot] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:5000/train')  // Verifica que esta URL sea correcta
+    fetch('http://localhost:5001/train')  // Verifica que esta URL sea correcta
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
