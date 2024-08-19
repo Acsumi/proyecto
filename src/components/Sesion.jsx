@@ -369,56 +369,24 @@ const Sesion = () => {
                       E-mail o Número teléfonico
                     </div>
                   </div>
-                  <div
+                  <input
                     style={{
-                      height: 20,
+                      height: 10,
                       paddingTop: 14,
                       paddingBottom: 16,
                       paddingLeft: 16,
-                      paddingRight: 50,
+                      paddingRight: 240,
                       background: "#EDF2F7",
                       borderRadius: 6,
                       justifyContent: "flex-start",
                       alignItems: "center",
                       display: "inline-flex",
+                      border: 'none',
+                      outline: 'none'
                     }}
                   >
-                    <div
-                      style={{
-                        width: 358,
-                        alignSelf: "stretch",
-                        paddingTop: 0.5,
-                        paddingBottom: 0.5,
-                        paddingRight: 1,
-                        justifyContent: "flex-start",
-                        alignItems: "center",
-                        display: "inline-flex",
-                      }}
-                    >
-                      <div
-                        style={{
-                          alignSelf: "stretch",
-                          justifyContent: "flex-start",
-                          alignItems: "center",
-                          gap: 10,
-                          display: "inline-flex",
-                        }}
-                      >
-                        <div
-                          style={{
-                            color: "#7A828A",
-                            fontSize: 15,
-                            fontFamily: "Arial",
-                            fontWeight: "500",
-                            lineHeight: 15,
-                            wordWrap: "break-word",
-                          }}
-                        >
-                          Escribe tu email o número teléfonico
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    
+                  </input>
                 </div>
               </div>
               <div
@@ -464,80 +432,30 @@ const Sesion = () => {
                       Contraseña
                     </div>
                   </div>
-                  <div
+                  <input
+                  type="password"
                     style={{
                       height: 10,
+                      width: 390,
+                      paddingRight: 15,
                       paddingTop: 14,
                       paddingBottom: 16,
                       paddingLeft: 16,
-                      paddingRight: 50,
                       background: "#EDF2F7",
                       borderRadius: 6,
-                      justifyContent: "flex-start",
                       alignItems: "center",
-                      display: "inline-flex",
+                      outline: 'none',
+                      border: 'none'
                     }}
                   >
-                    <div
-                      style={{
-                        width: 358,
-                        alignSelf: "stretch",
-                        paddingTop: 1,
-                        paddingBottom: 1,
-                        paddingRight: 1,
-                        justifyContent: "flex-start",
-                        alignItems: "center",
-                        display: "inline-flex",
-                      }}
-                    >
-                      <div
-                        style={{
-                          alignSelf: "stretch",
-                          justifyContent: "flex-start",
-                          alignItems: "center",
-                          gap: 10,
-                          display: "inline-flex",
-                        }}
-                      >
-                        <div
-                          style={{
-                            color: "#7A828A",
-                            fontSize: 15,
-                            fontFamily: "Arial",
-                            fontWeight: "500",
-                            lineHeight: 15,
-                            wordWrap: "break-word",
-                          }}
-                        >
-                          Contraseña
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      width: 110,
-                      height: 1,
-                      justifyContent: "center",
-                      alignItems: "center",
-                      display: "inline-flex",
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: 424,
-                        textAlign: "right",
-                        color: "#777E90",
-                        fontSize: 11,
-                        fontFamily: "Arial",
-                        fontWeight: "400",
-                        lineHeight: 12,
-                        wordWrap: "break-word",
-                      }}
-                    >
-                      Olvide mi contraseña
-                    </div>
-                  </div>
+                    
+                  </input>
+                  <div style={{ }}>
+            <Link to="/Principal" style={{ textDecoration: "none" }}>
+              <BotonInicio>Entrar</BotonInicio>
+           </Link>
+          </div>
+                  
                 </div>
             </div>
         

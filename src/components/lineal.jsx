@@ -20,7 +20,7 @@ const Lineal = () => {
   }, []);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '20px' }}>
+    <div style={{ display: 'flex', marginLeft: '580px' }}>
       <div style={{ width: '80%', maxWidth: '600px' }}>
         {plot ? (
           <img src={`data:image/png;base64,${plot}`} alt="Gráfica" style={{ width: '100%', height: 'auto' }} />

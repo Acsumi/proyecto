@@ -46,12 +46,12 @@ const Reporte1 = () => {
   };
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}>
-      <div style={{ display: 'flex', flex: 1 }}>
+    <div style={{ display: 'contents', minHeight: '100vh', flexDirection: 'column', alignContent: 'center' }}>
+      <div style={{ display: 'flex', flex: 1, justifyContent: 'center' }}>
         <Sidebar />
         <div style={{ flex: 1, marginLeft: '00px', display: 'flex', flexDirection: 'column' }}>
           <UserBadge />
-          <div style={{ display: 'flex', justifyContent: 'center',marginLeft: '300px', margin: '20px 0' }}>
+          <div style={{ display: 'flex', justifyContent: 'center',marginLeft: '300px' }}>
             <div style={{ display: 'flex', gap: '30px' }}>
               <HoverButton
                 onClick={() => setSelectedOption("graficas")}
