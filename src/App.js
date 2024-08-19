@@ -26,6 +26,8 @@ import Estadis2  from "./components/Estadis2.jsx";
 import Estadis  from "./components/Estadis.jsx";
 import Respaldo from "./components/Respaldo.jsx";
 import Grafica from "./components/Grafica.jsx"
+import Grafica2 from "./components/Grafica2.jsx"
+
 import Admin from "./components/Admin.jsx";
 import UserPanel from "./components/UserPanel";
 import Servicios from "./components/Servicios";
@@ -70,6 +72,7 @@ const App = () => {
           <Route path="/Estadis" element={<Estadis />} />
           <Route path="/Admin" element={<Admin />} />
           <Route path="/Grafica" element={<Grafica />} />
+          <Route path="/Grafica2" element={<Grafica2 />} />
 
 
 

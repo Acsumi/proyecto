@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from './Barra.jsx'; // Importa el componente Sidebar desde Barra.jsx
 import Estadis from './Estadis.jsx'; // Importa el componente Estadis desde Estadis.jsx
-import Grafica from './Grafica.jsx'; // 
+import Grafica2 from './Grafica2.jsx'; // 
 import './Principal.css'; // Importa los estilos CSS para el componente Principal
 import UserBadge from './Icono.jsx'; // Asegúrate de ajustar la ruta al archivo si está en una ubicación diferente
 
@@ -15,7 +15,7 @@ const Principal = () => {
         <Sidebar /> {/* Utiliza el componente Sidebar */}
         <div className="col-md-6 offset-md-3">
         <br />
-          <Grafica />
+          <Grafica2 />
 
         </div>
       </div>
