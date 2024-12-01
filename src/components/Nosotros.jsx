@@ -251,7 +251,7 @@ const Nosotros = () => {
         >
          <div style={{ display: 'flex', alignItems: 'center', width: 954.62, opacity: 0.75 }}>
          <h3 style={{ marginRight: '30px', color: '#FFFFFF' }}>Títulosin </h3>
-            <CustomLink href="/Inicio">Inicio</CustomLink>
+            <CustomLink href="/">Inicio</CustomLink>
             <CustomLink href="/servicios">Servicios</CustomLink>
             
             <CustomLink href="/brigada">Brigada</CustomLink>

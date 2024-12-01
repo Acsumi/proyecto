@@ -106,7 +106,7 @@ const Inicio = () => {
         >
          <div style={{ display: 'flex', alignItems: 'center', width: 954.62, opacity: 0.75 }}>
          <h3 style={{ marginRight: '30px', color: '#FFFFFF' }}>Títulosin </h3>
-            <CustomLink href="/Inicio">Inicio</CustomLink>
+            <CustomLink href="/">Inicio</CustomLink>
             <CustomLink href="/servicios">Servicios</CustomLink>
             <CustomLink href="/brigada">Brigada</CustomLink>
             <CustomLink href="/Nosotros">Contactos</CustomLink>
@@ -189,7 +189,7 @@ const Inicio = () => {
                 wordWrap: "break-word",
               }}
             >
-              <a href="inicio" style={{ textDecoration: "none", color: "#302F2F" }}>
+              <a href="/" style={{ textDecoration: "none", color: "#302F2F" }}>
                 PBOO
               </a>
             </div>
