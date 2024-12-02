@@ -27,6 +27,7 @@ import Estadis  from "./components/Estadis.jsx";
 import Respaldo from "./components/Respaldo.jsx";
 import Grafica from "./components/Grafica.jsx"
 import Grafica2 from "./components/Grafica2.jsx"
+import MenuBarra from "./components/MenuBarra.jsx"
 
 import Admin from "./components/Admin.jsx";
 import UserPanel from "./components/UserPanel";
@@ -73,6 +74,7 @@ const App = () => {
           <Route path="/Admin" element={<Admin />} />
           <Route path="/Grafica" element={<Grafica />} />
           <Route path="/Grafica2" element={<Grafica2 />} />
+          <Route path="/MenuBarra" element={<MenuBarra />} />
 
 
 
