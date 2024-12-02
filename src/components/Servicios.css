@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin-top: 10px; /* Ajustar el espacio respecto al menú */
+  }
+  
+  .header-text {
+    text-align: center;
+    color: #1a191e;
+    font-size: 36px; /* Texto más grande y llamativo */
+    font-weight: bold;
+    line-height: 1.3;
+    word-wrap: break-word;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Mayúsculas para mayor impacto */
+    letter-spacing: 2px; /* Espaciado de letras para darle más presencia */
+  }
+  
+  .subtext {
+    text-align: center;
+    color: #1a191e;
+    font-size: 18px; /* Aumenta el tamaño para hacerlo más legible */
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra sutil para hacer que el texto resalte */
+  }
+  
+  .subtext span {
+    display: block;
+    margin-top: 10px; /* Espaciado entre las líneas del texto */
+    font-size: 16px; /* Tamaño de fuente más pequeño para las líneas secundarias */
+    color: #6c6c6c; /* Color más suave para el texto secundario */
+  }
+  
+  
+  .services-section {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f8f8;
+    border-radius: 16px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 40px;
+  }
+  
+  .services-section .text-content {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .services-section img {
+    width: 35%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+  }
+  
+  .description-header {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 10px;
+  }
+  
+  .description-text {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2;
+    margin-bottom: 20px;
+  }
+  
+  /* Media Queries para pantallas más pequeñas */
+  @media (max-width: 1024px) {
+    .header-text {
+      font-size: 28px;
+    }
+  
+    .subtext {
+      font-size: 14px;
+    }
+  
+    .services-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .services-section img {
+      width: 50%; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+      margin-bottom: 20px;
+    }
+  
+    .description-header {
+      font-size: 20px;
+    }
+  
+    .description-text {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-text {
+      font-size: 24px;
+    }
+  
+    .subtext {
+      font-size: 12px;
+    }
+  
+    .services-section img {
+      width: 60%;
+    }
+  
+    .description-header {
+      font-size: 18px;
+    }
+  
+    .description-text {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header-text {
+      font-size: 20px;
+    }
+  
+    .subtext {
+      font-size: 10px;
+    }
+  
+    .services-section img {
+      width: 70%;
+    }
+  
+    .description-header {
+      font-size: 16px;
+    }
+  
+    .description-text {
+      font-size: 10px;
+    }
+  }
+  
