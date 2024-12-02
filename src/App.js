@@ -47,7 +47,7 @@ const App = () => {
         <hr />
 
         <Routes>
-          <Route path="/" element={<Inicio />} />
+          <Route path="/Inicio" element={<Inicio />} />
           <Route path="/formulario" element={<Formulario />} />
           <Route path="/Pie" element={<Pie />} />
 
@@ -70,7 +70,7 @@ const App = () => {
           <Route path="/Form3" element={<Form3 />} />
           <Route path="/Form4" element={<Form4 />} />
           <Route path="/UserPanel" element={<UserPanel />} />
-          <Route path="/Servicios" element={<Servicios />} />
+          <Route path="/" element={<Servicios />} />
           <Route path="/Brigada" element={<Brigada />} />
           <Route path="/Soporte" element={<Soporte />} />
           <Route path="/Mapa" element={<Mapa />} />

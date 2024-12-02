@@ -4,29 +4,198 @@ import "./Navbar.css"; // Importa el archivo de estilos
 import logo from "../assets/images/logo.png";
 import celu from "../assets/images/celu.png";
 import Doctores from "../assets/images/doctores.png";
-import Menu from './MenuBarra.jsx'; // Importa el componente Sidebar desde Barra.jsx
-import Pie from './Pie.jsx'; 
-
-
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js').then((registration) => {
-      console.log('ServiceWorker registrado con éxito:', registration);
-  }).catch((error) => {
-      console.log('Error al registrar el ServiceWorker:', error);
-  });
-}
-
 
 const Inicio = () => {
- 
+  const CustomLink = ({ href, children }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+      <a
+        href={href}
+        style={{
+          textDecoration: "none",
+          color: isHovered ? "#4AB3CA" : "rgba(0, 0, 0, 0.87)", // Cambia el color del texto basado en el estado hovered
+          fontSize: 18,
+          fontFamily: "Arial",
+          fontWeight: "700",
+          wordWrap: "break-word",
+          transition: "background 0.3s, color 0.3s",
+          marginLeft: "30px", // Añade margen izquierdo para separar los enlaces
+        }}
+        onMouseEnter={() => setIsHovered(true)} // Establece hovered en true cuando el cursor entra
+        onMouseLeave={() => setIsHovered(false)} // Establece hovered en false cuando el cursor sale
+      >
+        {children}
+      </a>
+    );
+  };
+  const CustomButton = ({ children }) => {
+    const [isHovered, setIsHovered] = useState(false);
+
+    return (
+      <div
+        className="Button"
+        style={{
+          width: 150,
+          height: 50,
+          background: isHovered ? "#4AB3CA" : "#FFFFFF", // Cambiado el color del fondo basado en el estado hovered
+          color: isHovered ? "#FFFFFF" : "#000000",
+          border: "none",
+          borderRadius: 10,
+          textAlign: "center",
+          fontSize: 14,
+          fontFamily: "Arial",
+          fontWeight: "700",
+          textTransform: "uppercase",
+          wordWrap: "break-word",
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
+          marginRight: 10,
+          transition: "background 0.3s, color 0.3s",
+          textDecoration: "none", // Evitar la línea debajo del texto como un enlace
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <a
+          href="/crear-cuenta"
+          style={{
+            textDecoration: "none",
+            color: isHovered ? "#FFFFFF" : "#000000",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {children}
+        </a>
+      </div>
+    );
+  };
   return (
     <div>
-     
+      <img
+        style={{
+          position: "absolute",
+          paddingTop: 30,
+          top: "calc(2% + 3px)",
+          right: 1330,
+          width: "3%",
+          height: "auto",
+        }}
+        src={logo}
+        alt="logo"
+      />
 
-     <Menu />
+      <div style={{ width: "100%", height: "100%", position: "relative" }}>
+        <div
+          style={{
+            width: 1408.12,
+            paddingBottom: 4.48,
+            left: 295.88,
+            top: 34.72,
+            position: "absolute",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: 165.38,
+            display: "inline-flex",
+          }}
+        >
+         <div style={{ display: 'flex', alignItems: 'center', width: 954.62, opacity: 0.75 }}>
+         <h3 style={{ marginRight: '30px', color: '#FFFFFF' }}>Títulosin </h3>
+            <CustomLink href="/">Inicio</CustomLink>
+            <CustomLink href="/servicios">Servicios</CustomLink>
+            <CustomLink href="/brigada">Brigada</CustomLink>
+            <CustomLink href="/Nosotros">Contactos</CustomLink>
+        </div>
 
-       
-        
+
+          <div style={{ display: "flex", justifyContent: "flex-end" }}>
+            <Link to="/Formulario" style={{ textDecoration: "none" }}>
+              <CustomButton>Crear cuenta</CustomButton>
+            </Link>
+            <Link to="/Sesion" style={{ textDecoration: "none" }}>
+              <CustomButton>Iniciar sesión</CustomButton>
+            </Link>
+          </div>
+
+          <div
+            style={{
+              width: 388.12,
+              height: 44.8,
+              position: "relative",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              alignItems: "flex-start",
+              display: "flex",
+            }}
+          >
+            <div
+              style={{
+                width: 180,
+                height: 44.8,
+                justifyContent: "center",
+                alignItems: "center",
+                display: "inline-flex",
+              }}
+            >
+              <div
+                style={{
+                  width: 150,
+                  height: 13.8,
+                  position: "relative",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  alignItems: "flex-start",
+                  display: "flex",
+                }}
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            width: 388.88,
+            height: 60.48,
+            left: 36,
+            top: 25.76,
+            position: "absolute",
+            justifyContent: "center",
+            alignItems: "center",
+            display: "inline-flex",
+          }}
+        >
+          <div
+            style={{
+              paddingTop: 8,
+              paddingBottom: 10.72,
+              paddingLeft: 69.75,
+              paddingRight: 41.12,
+              justifyContent: "flex-end",
+              alignItems: "center",
+              display: "inline-flex",
+            }}
+          >
+            <div
+              style={{
+                color: "#302F2F",
+                fontSize: 36,
+                fontFamily: "Arial",
+                fontWeight: "700",
+                wordWrap: "break-word",
+              }}
+            >
+              <a href="/" style={{ textDecoration: "none", color: "#302F2F" }}>
+                PBOO
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div
         style={{
@@ -1506,11 +1675,306 @@ const Inicio = () => {
           </div>
         </div>
       </div>
-     <Pie />
-         
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          paddingBottom: 1,
+          background:
+            "linear-gradient(90deg, #EFF2F1 0%, rgba(73.87, 179.11, 202.22, 0.41) 51%, #E2E4E5 100%)",
+          flexDirection: "column",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          gap: 1,
+          display: "inline-flex",
+        }}
+      >
+        <div style={{ width: 16, height: 1, background: "#E8E8E8" }} />
+        <div
+          style={{
+            width: 1400,
+            flex: "1 1 0",
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            alignItems: "flex-start",
+            gap: 80,
+            display: "flex",
+          }}
+        >
+          <div
+            style={{
+              alignSelf: "stretch",
+              justifyContent: "flex-start",
+              alignItems: "flex-start",
+              gap: 300,
+              display: "inline-flex",
+            }}
+          >
+            <div
+              style={{
+                color: "#302F2F",
+                fontSize: 40,
+                fontFamily: "Arial",
+                fontWeight: "Bold",
+                lineHeight: 1,
+                paddingLeft: 60,
+                paddingTop: 50,
+
+                wordWrap: "break-word",
+              }}
+            >
+              PBOO
             </div>
-         
-       
+            <div
+              style={{
+                flex: "1 1 0",
+                height: 25,
+                justifyContent: "flex-start",
+                alignItems: "flex-start",
+                gap: 48,
+                display: "flex",
+              }}
+            >
+              <div
+                style={{
+                  flex: "1 1 0",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  alignItems: "flex-start",
+                  gap: 32,
+                  display: "inline-flex",
+                }}
+              >
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    color: "rgba(26, 25, 30, 0.50)",
+                    fontSize: 18,
+                    fontFamily: "DM Sans, sans-serif",
+                    fontWeight: "500",
+                    lineHeight: 1.5,
+                    paddingTop: 50,
+                    wordWrap: "break-word",
+                  }}
+                >
+                  ¿Quienes somos?
+                  <br />
+                  Misión
+                  <br />
+                  Visión
+                  <br />
+                  Avances
+                </div>
+              </div>
+
+              <div
+                style={{
+                  flex: "1 1 0",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  alignItems: "flex-start",
+                  gap: 32,
+                  display: "inline-flex",
+                }}
+              >
+                <div
+                  style={{
+                    alignSelf: "stretch",
+                    color: "rgba(26, 25, 30, 0.50)",
+                    fontSize: 18,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: "500",
+                    lineHeight: 1.5,
+                    paddingTop: 50,
+                    wordWrap: "break-word",
+                  }}
+                >
+                  Conoce el blog
+                  <br />
+                  Nuestros días
+                  <br />
+                  Opiniones
+                  <br />
+                  Usabilidad
+                </div>
+              </div>
+              <div
+                style={{
+                  flex: "1 1 0",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  alignItems: "flex-start",
+                  gap: 32,
+                  display: "inline-flex",
+                }}
+              >
+                <div
+                  style={{
+                    color: "rgba(26, 25, 30, 0.50)",
+                    fontSize: 18,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: "500",
+                    lineHeight: 1.5,
+                    paddingTop: 50,
+                    wordWrap: "break-word",
+                  }}
+                >
+                  Aplicación Móvil
+                  <br />
+                  Conocerla
+                  <br />
+                  Instalarla
+                  <br />
+                  Compartir
+                </div>
+              </div>
+              <div
+                style={{
+                  flex: "1 1 0",
+                  flexDirection: "column",
+                  justifyContent: "flex-start",
+                  alignItems: "flex-start",
+                  gap: 32,
+                  display: "inline-flex",
+                }}
+              >
+                <div
+                  style={{
+                    color: "rgba(26, 25, 30, 0.50)",
+                    fontSize: 18,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: "500",
+                    lineHeight: 1.5,
+                    paddingTop: 50,
+                    wordWrap: "break-word",
+                  }}
+                >
+                  Nuestras redes
+                  <br />
+                  Facebook
+                  <br />
+                  Instagram
+                  <br />
+                  Twitter
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style={{
+              alignSelf: "stretch",
+              height: 39,
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              alignItems: "flex-start",
+              gap: 16,
+              display: "flex",
+            }}
+          >
+            <div
+              style={{
+                alignSelf: "stretch",
+                height: 100,
+                background: "#E8E8E8",
+              }}
+            />
+            <div
+              style={{
+                alignSelf: "stretch",
+                justifyContent: "space-between",
+                alignItems: "center",
+                display: "inline-flex",
+              }}
+            >
+              <div>
+                <span
+                  style={{
+                    color: "rgba(26, 25, 30, 0.50)",
+                    fontSize: 14,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: "500",
+                    lineHeight: 2,
+                    wordWrap: "break-word",
+                  }}
+                >
+                  © Made by{" "}
+                </span>
+                <span
+                  style={{
+                    color: "#4AB3CA",
+                    fontSize: 14,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: "500",
+                    lineHeight: 2,
+                    wordWrap: "break-word",
+                  }}
+                >
+                  UTZMG
+                </span>
+                <span
+                  style={{
+                    color: "rgba(26, 25, 30, 0.50)",
+                    fontSize: 14,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: "500",
+                    lineHeight: 2,
+                    wordWrap: "break-word",
+                  }}
+                >
+                  {" "}
+                  - Powered by{" "}
+                </span>
+                <span
+                  style={{
+                    color: "#4AB3CA",
+                    fontSize: 14,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: "500",
+                    lineHeight: 2,
+                    wordWrap: "break-word",
+                  }}
+                >
+                  PBOO
+                </span>
+              </div>
+              <div
+                style={{
+                  justifyContent: "flex-start",
+                  alignItems: "flex-start",
+                  gap: 32,
+                  display: "flex",
+                }}
+              >
+                <div
+                  style={{
+                    color: "rgba(26, 25, 30, 0.50)",
+                    fontSize: 14,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: "500",
+                    lineHeight: 2,
+                    wordWrap: "break-word",
+                  }}
+                >
+                  Guadalajara
+                </div>
+                <div
+                  style={{
+                    color: "rgba(26, 25, 30, 0.50)",
+                    fontSize: 14,
+                    fontFamily: "'DM Sans', sans-serif",
+                    fontWeight: "500",
+                    lineHeight: 2,
+                    wordWrap: "break-word",
+                  }}
+                >
+                  Jalisco
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
