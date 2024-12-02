@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Inicio from "./components/Inicio";
 import Alertas from "./components/Alertas";
+import Pie from "./components/Pie.jsx";
 
 import Formulario from "./components/Formulario";
 import Principal from "./components/Principal";
@@ -46,8 +47,10 @@ const App = () => {
         <hr />
 
         <Routes>
-          <Route path="/" element={<Inicio />} />
+          <Route path="/Inicio" element={<Inicio />} />
           <Route path="/formulario" element={<Formulario />} />
+          <Route path="/Pie" element={<Pie />} />
+
           <Route path="/Roberto" element={<Roberto />} />
           <Route path="/Sesion" element={<Sesion />} />
           <Route path="/Modal" element={<Modal />} />
@@ -67,7 +70,7 @@ const App = () => {
           <Route path="/Form3" element={<Form3 />} />
           <Route path="/Form4" element={<Form4 />} />
           <Route path="/UserPanel" element={<UserPanel />} />
-          <Route path="/Servicios" element={<Servicios />} />
+          <Route path="/" element={<Servicios />} />
           <Route path="/Brigada" element={<Brigada />} />
           <Route path="/Soporte" element={<Soporte />} />
           <Route path="/Mapa" element={<Mapa />} />

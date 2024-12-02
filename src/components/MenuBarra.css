@@ -1,129 +1,134 @@
 /* Contenedor principal */
 .navbar {
-    width: 100%; /* El navbar ocupa el 100% del ancho de la pantalla */
-    background: #FFFFFF; /* Fondo blanco */
-    color: #000000; /* Texto negro */
-    padding: 1% 15%; /* Espaciado superior e inferior con un 15% de margen a los lados */
-    box-sizing: border-box; /* El padding no aumenta el tamaño del contenedor */
-    position: relative; /* Para posicionamiento absoluto de elementos dentro */
-    z-index: 100; /* Asegura que el navbar esté por encima de otros elementos */
+    width: 100%;
+    background: #FFFFFF;
+    color: #000000;
+    padding: 1% 15%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 100;
   }
   
   /* Contenido del navbar */
   .navbar-container {
-    display: flex; /* Flexbox para alinear los elementos */
-    justify-content: space-between; /* Espaciado entre logo y menú */
-    align-items: center; /* Centra los elementos verticalmente */
+    display: flex;
+    justify-content: space-between; /* Asegura que el logo y el menú estén en extremos opuestos */
+    align-items: center;
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho */
   }
   
   /* Logo */
   .navbar-logo-container {
-    display: flex; /* Flexbox para alinear el logo y el texto */
-    align-items: center; /* Alinea verticalmente el logo y el texto */
-    gap: 0.7rem; /* Espacio entre el logo y el texto "PBOO" */
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-grow: 1; /* Hace que el logo ocupe todo el espacio disponible y se mantenga a la izquierda */
   }
   
   .navbar-logo {
-    width: 15%; /* El logo ocupa el 15% del ancho */
-    height: auto; /* Mantiene la proporción del logo */
+    width: 15%;
+    height: auto;
   }
   
   .navbar-title {
-    font-size: 2.5rem; /* Tamaño del texto "PBOO" */
-    font-weight: bold; /* Texto en negrita */
+    font-size: 2.5rem;
+    font-weight: bold;
   }
   
   /* Botón para el menú móvil */
   .menu-button {
-    background: none; /* Sin fondo */
-    border: none; /* Sin borde */
-    font-size: 2rem; /* Tamaño del ícono del menú */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
     display: none; /* Inicialmente oculto en pantallas grandes */
   }
   
   /* Enlaces del menú */
   .navbar-links {
-    display: flex; /* Muestra los enlaces en una fila */
-    align-items: center; /* Alinea los enlaces verticalmente */
-    gap: 2.8rem; /* Espacio entre las opciones del menú */
+    display: flex;
+    align-items: center;
+    gap: 2.9rem;
   }
   
   .custom-link {
-    text-decoration: none; /* Quita el subrayado de los enlaces */
-    color: #000000; /* Color negro para el texto */
-    font-size: 1.1rem; /* Tamaño de letra */
-    font-weight: 700; /* Texto en negrita */
-    transition: color 0.3s ease-in-out; /* Transición suave para el cambio de color */
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
   }
   
-  /* Cambio de color al pasar el mouse sobre los enlaces */
   .custom-link:hover {
-    color: #007BFF; /* Color azul cuando el mouse pasa por encima */
+    color: #007BFF;
   }
   
   /* Botones personalizados (crear cuenta, iniciar sesión) */
   .navbar-buttons {
-    display: flex; /* Muestra los botones en una fila */
-    gap: 4rem; /* Espacio entre los botones */
+    display: flex;
+    gap: 4rem;
   }
   
   /* Menú móvil */
   .navbar-links.open {
-    position: fixed; /* Posiciona el menú sobre el contenido */
-    top: 0; /* En la parte superior de la pantalla */
-    right: 0; /* Alineado a la derecha */
-    width: 40%; /* El menú ocupa el 40% de la pantalla */
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    background: #F7F7F7; /* Fondo claro para diferenciar el menú */
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave a la izquierda */
-    display: flex; /* Muestra los enlaces en columna */
-    flex-direction: column; /* Ordena los enlaces en columna */
-    align-items: flex-start; /* Alinea los elementos al principio */
-    padding: 2rem; /* Espaciado dentro del menú */
-    gap: 1rem; /* Espacio entre los enlaces */
-    transform: translateX(0); /* Menú visible cuando está abierto */
-    transition: transform 0.3s ease-in-out; /* Animación suave al abrir y cerrar el menú */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    background: #F7F7F7;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1rem;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
   }
   
   /* Botón para cerrar el menú móvil */
   .close-button {
-    background: none; /* Sin fondo */
-    border: none; /* Sin borde */
-    font-size: 2rem; /* Tamaño del ícono de cerrar */
-    position: absolute; /* Posiciona el botón de cerrar en la esquina superior derecha */
+    background: none;
+    border: none;
+    font-size: 2rem;
+    position: absolute;
     top: 1rem;
     right: 1rem;
-    cursor: pointer; /* Cambia el cursor a mano al pasar por encima */
+    cursor: pointer;
   }
   
   /* Ocultar menú en pantallas pequeñas */
   @media (max-width: 768px) {
-    /* Muestra el botón del menú en pantallas pequeñas */
     .menu-button {
-      display: block;
+      display: block; /* Muestra el botón en pantallas pequeñas */
     }
   
-    /* Oculta los enlaces en pantallas pequeñas */
+    /* Asegura que los enlaces se oculten en pantallas pequeñas */
     .navbar-links {
       display: none;
     }
   
-    /* Muestra el menú cuando está abierto */
+    /* Muestra los enlaces cuando el menú está abierto */
     .navbar-links.open {
       display: flex;
     }
   
-    /* Asegura que cada opción esté en una fila separada en el menú móvil */
-    .navbar-buttons {
-      flex-direction: column; /* Coloca los botones en columna */
-      gap: 1rem; /* Espacio entre los botones */
+    /* Ajusta la barra de navegación para que el logo y los botones estén en los extremos */
+    .navbar-container {
+      justify-content: space-between;
+      width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
     }
-  }
   
-  /* Estilos para evitar línea gris */
-  header {
-    border: none; /* Eliminar cualquier borde */
-    box-shadow: none; /* Eliminar sombra */
+    /* Asegura que el botón de menú esté alineado a la derecha */
+    .menu-button {
+      position: absolute;
+      right: 25px;
+    }
+
+    .navbar-buttons {
+        flex-direction: column; /* Los botones estarán en columna */
+        gap: 1rem; /* Espacio entre los botones */
+      }
   }
   

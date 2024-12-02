@@ -4,6 +4,8 @@ import "./Brigada.css"; // Importa el archivo de estilos
 import logo from "../assets/images/logo.png";
 import brigada from "../assets/images/brigada.jpg";
 import Menu from './MenuBarra.jsx'; // Importa el componente Sidebar desde Barra.jsx
+import Pie from './Pie.jsx'; 
+
 
 const Brigada = () => {
   return (
@@ -30,6 +32,7 @@ const Brigada = () => {
           </ul>
         </div>
       </div>
+      <Pie />
     </div>
   );
 };
