@@ -1,0 +1,107 @@
+/* Contenedor principal */
+.brigada-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Imagen de brigada */
+  .brigada-image {
+    width: 100%;
+    height: auto;
+    max-width: 1000px; /* Max width para que no sea demasiado grande en pantallas grandes */
+    padding-top: 150px;
+  }
+  
+  /* Texto dentro del contenedor */
+  .brigada-text {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  /* Título */
+  .title {
+    font-size: 28px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #1A191E;
+    line-height: 3;
+    word-wrap: break-word;
+    padding-top: 40px;
+  }
+  
+  /* Descripción */
+  .description {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    color: #1A191E;
+    line-height: 2;
+    word-wrap: break-word;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+  }
+  
+  /* Curiosidades */
+  .curiosities {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    color: #1A191E;
+    line-height: 2;
+    word-wrap: break-word;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+  }
+  
+  .curiosities ul {
+    list-style-type: disc;
+    padding-left: 40px;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 768px) {
+    .brigada-image {
+      width: 100%; /* Asegura que la imagen ocupe todo el ancho de la pantalla */
+      height: auto;
+    }
+  
+    .title {
+      font-size: 24px; /* Reduce el tamaño del título en pantallas pequeñas */
+      padding-top: 20px;
+    }
+  
+    .description, .curiosities {
+      font-size: 16px; /* Ajusta el tamaño del texto en pantallas pequeñas */
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  
+    .brigada-text {
+      gap: 12px;
+      padding: 0 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 20px; /* Más pequeño en pantallas extra pequeñas */
+    }
+  
+    .description, .curiosities {
+      font-size: 14px; /* Texto aún más pequeño en pantallas pequeñas */
+    }
+  
+    .brigada-container {
+      padding: 10px;
+    }
+  }
+  

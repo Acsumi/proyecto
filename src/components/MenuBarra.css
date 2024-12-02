@@ -46,13 +46,13 @@
   .navbar-links {
     display: flex; /* Muestra los enlaces en una fila */
     align-items: center; /* Alinea los enlaces verticalmente */
-    gap: 2.5rem; /* Espacio entre las opciones del menú */
+    gap: 2.8rem; /* Espacio entre las opciones del menú */
   }
   
   .custom-link {
     text-decoration: none; /* Quita el subrayado de los enlaces */
     color: #000000; /* Color negro para el texto */
-    font-size: 1.2rem; /* Tamaño de letra */
+    font-size: 1.1rem; /* Tamaño de letra */
     font-weight: 700; /* Texto en negrita */
     transition: color 0.3s ease-in-out; /* Transición suave para el cambio de color */
   }
