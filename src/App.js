@@ -37,6 +37,8 @@ import Soporte from "./components/Soporte";
 import Mapa from "./components/Mapa";
 import Lineal from "./components/lineal";
 
+
+
 const App = () => {
   return (
     <Router>

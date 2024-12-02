@@ -6,6 +6,9 @@ import authRoutes2 from './routes/tasks.routes.js'
 
 
 const app = express();
+const cors = require('cors');
+app.use(cors());
+
 
 app.use(morgan("dev"));
 app.use(express.json());

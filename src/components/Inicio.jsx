@@ -6,6 +6,16 @@ import celu from "../assets/images/celu.png";
 import Doctores from "../assets/images/doctores.png";
 import Menu from './MenuBarra.jsx'; // Importa el componente Sidebar desde Barra.jsx
 
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then((registration) => {
+      console.log('ServiceWorker registrado con éxito:', registration);
+  }).catch((error) => {
+      console.log('Error al registrar el ServiceWorker:', error);
+  });
+}
+
+
 const Inicio = () => {
  
   return (
