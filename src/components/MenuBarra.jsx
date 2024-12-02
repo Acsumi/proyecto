@@ -23,11 +23,7 @@ const Inicio = () => {
   }, []);
 
   const CustomLink = ({ href, children }) => (
-    <a
-      href={href}
-      className="custom-link"
-      onClick={closeMenu}
-    >
+    <a href={href} className="custom-link" onClick={closeMenu}>
       {children}
     </a>
   );
@@ -42,10 +38,7 @@ const Inicio = () => {
         <button onClick={toggleMenu} className="menu-button">
           ☰
         </button>
-        <nav
-          ref={menuRef}
-          className={`navbar-links ${menuOpen ? "open" : ""}`}
-        >
+        <nav ref={menuRef} className={`navbar-links ${menuOpen ? "open" : ""}`}>
           <CustomLink href="/">Inicio</CustomLink>
           <CustomLink href="/servicios">Servicios</CustomLink>
           <CustomLink href="/brigada">Brigada</CustomLink>
