@@ -12,7 +12,7 @@ self.addEventListener('install', (event) => {
                 'components/Servicios.jsx',
                 'components/Sesion.jsx',
                 'components/Nosotros.jsx',
-                'components/Moddal.jsx',
+                'components/Modal.jsx',
                 'components/Navbar.css',
                 'components/Roberto.jsx',
                 'components/MenuBarra.jsx',
@@ -29,7 +29,33 @@ self.addEventListener('install', (event) => {
                 '/assets/images/doctores.png',
                 '/assets/images/nos.png',
                 '/assets/images/robot2.png',
-                '/assets/images/doctora.png'
+                '/assets/images/doctora.png',
+                'components/Admin.css',
+                'components/python/api.py',
+                'components/Admin.jsx',
+                'components/Alertas.jsx',
+                'components/Alertas.css',
+                'components/Barra.jsx',
+                'components/Barra.css',
+                'components/Grafica.jsx',
+                'components/Grafica2.jsx',
+                'components/lineal.jsx',
+                'components/Icono.jsx',
+                'components/Mapa.css',
+                'components/Mapa.jsx',
+                'components/Mensajes.jsx',
+                'components/Mensajes.css',
+                'components/MensajesF.jsx',
+                'components/MenuBarra.css',
+                'components/MenuBarra.jsx',
+                'components/Reporte1.jsx',
+                'components/Reporte1.css',
+                'components/trans.css',
+                'components/trans.jsx',
+                'components/UserPanel.jsx'
+
+
+
                 // Agrega aquí más archivos que deseas cachear
             ]);
         })
