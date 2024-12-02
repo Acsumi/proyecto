@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Inicio from "./components/Inicio";
 import Alertas from "./components/Alertas";
+import Pie from "./components/Pie.jsx";
 
 import Formulario from "./components/Formulario";
 import Principal from "./components/Principal";
@@ -46,6 +47,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Inicio />} />
           <Route path="/formulario" element={<Formulario />} />
+          <Route path="/Pie" element={<Pie />} />
+
           <Route path="/Roberto" element={<Roberto />} />
           <Route path="/Sesion" element={<Sesion />} />
           <Route path="/Modal" element={<Modal />} />

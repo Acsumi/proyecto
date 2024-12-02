@@ -72,6 +72,7 @@
     .brigada-image {
       width: 100%; /* Asegura que la imagen ocupe todo el ancho de la pantalla */
       height: auto;
+      overflow-x: hidden; 
     }
   
     .title {

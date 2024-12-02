@@ -1,5 +1,7 @@
 import React from "react";
-import Menu from './MenuBarra.jsx'; // Importa el componente Sidebar desde Barra.jsx
+import Menu from './MenuBarra.jsx'; 
+import Pie from './Pie.jsx'; 
+
 import ser1 from "../assets/images/ser1.png";
 import ser from "../assets/images/ser.png";
 import "./Servicios.css"; // Asegúrate de que el archivo CSS esté correctamente importado
@@ -63,6 +65,8 @@ const Servicios = () => {
           <img src={ser} alt="ser" />
         </div>
       </div>
+      <Pie />
+
     </div>
   );
 };

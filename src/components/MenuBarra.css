@@ -46,7 +46,7 @@
   .navbar-links {
     display: flex; /* Muestra los enlaces en una fila */
     align-items: center; /* Alinea los enlaces verticalmente */
-    gap: 2.8rem; /* Espacio entre las opciones del menú */
+    gap: 2.9rem; /* Espacio entre las opciones del menú */
   }
   
   .custom-link {
